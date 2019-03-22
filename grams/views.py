@@ -40,7 +40,7 @@ def index(request):
     # images = Image.get_images()
     current_user = request.user
 
-    title = 'FlipGram'
+    title = 'my-instagram'
 
     # user_info = Profile.objects.get(user=current_user.id)
 
