@@ -41,9 +41,8 @@ class Image(models.Model):
     image_caption = models.TextField(max_length=100, null=True, blank=True)
     likes = models.IntegerField(null=True, blank=True)
     date_uploaded = models.DateTimeField(auto_now_add=True, null=True)
-    profile = models.ForeignKey(
-        Profile, null=True, blank=True, on_delete=models.CASCADE)
-    user = models.ForeignKey(User)
+    profile = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['-date_uploaded']
@@ -134,8 +133,8 @@ class Follow(models.Model):
     '''
     Class that store a User and Profile follow status
     '''
-    user = models.ForeignKey(User)
-    profile = models.ForeignKey(Profile)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.user.username
