@@ -1,4 +1,6 @@
-{%extends "registration/base.html"%} {% load bootstrap3 %} {% block content %}
+{%extends "registration/base.html"%} 
+{% load bootstrap3 %} 
+{% block content %}
 <div class="container">
     <div class="row">
         <!-- Empty div -->
@@ -15,7 +17,8 @@
                 <div class="panel-body">
 
                     <form action="/accounts/login/" method="post">
-                        {% csrf_token %} {% bootstrap_form form%}
+                        {% csrf_token %} 
+                        {% bootstrap_form form%}
 
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary btn-sm" value="Login">
