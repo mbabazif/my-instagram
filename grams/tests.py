@@ -16,7 +16,7 @@ class ProfileTestClass(TestCase):
         Method that creates an instance of Profile class
         '''
         # Create instance of Profile class
-        self.new_profile = Profile(bio="I am Groot")
+        self.new_profile = Profile(bio="I am ok")
 
     def test_instance(self):
         '''
@@ -36,10 +36,10 @@ class ProfileTestClass(TestCase):
         '''
         Test case to check if all profiles are gotten from the database
         '''
-        self.james = User(username="kiki")
+        self.james = User(username="bety")
         self.james.save()
 
-        self.jane = User(username="ja-ne")
+        self.jane = User(username="grace")
         self.jane.save()
 
         self.test_profile = Profile(user=self.jane, bio="Another Profile")
@@ -80,10 +80,10 @@ class ImageTestClass(TestCase):
         '''
         Test case to check if all Images for a specific profile are gotten from the database
         '''
-        self.james = User(username="kiki")
+        self.james = User(username="bety")
         self.james.save()
 
-        self.jane = User(username="ja-ne")
+        self.jane = User(username="grace")
         self.jane.save()
 
         self.test_profile = Profile(user=self.jane, bio="Another Profile")
@@ -106,10 +106,10 @@ class FollowTestClass(TestCase):
         '''
         Test case to check if self.new_Image in an instance of Follow class
         '''
-        self.james = User(username="kiki")
+        self.james = User(username="bety")
         self.james.save()
 
-        self.jane = User(username="ja-ne")
+        self.jane = User(username="grace")
         self.jane.save()
 
         self.test_profile = Profile(user=self.jane, bio="Another Profile")
@@ -122,10 +122,10 @@ class FollowTestClass(TestCase):
         '''
         Test case to check if get following is getting profiles a specific user is following
         '''
-        self.james = User(username="kiki")
+        self.james = User(username="bety")
         self.james.save()
 
-        self.jane = User(username="ja-ne")
+        self.jane = User(username="grace")
         self.jane.save()
 
         self.test_profile = Profile(user=self.jane, bio="Another Profile")
@@ -152,7 +152,7 @@ class CommentTestClass(TestCase):
         '''
         # Create a Comment instance
         self.new_comment = Comment(
-            comment_content='Python James is Muriuki who wrote Python content for Moringa School')
+            comment_content='Florence student at Moringa school')
 
     def test_instance(self):
         '''
@@ -164,10 +164,10 @@ class CommentTestClass(TestCase):
         '''
         Test case to check if get Image comments is getting comments for a specific Image
         '''
-        self.james = User(username="kiki")
+        self.james = User(username="bety")
         self.james.save()
 
-        self.jane = User(username="ja-ne")
+        self.jane = User(username="grace")
         self.jane.save()
 
         self.test_profile = Profile(user=self.jane, bio="Another Profile")
@@ -175,7 +175,7 @@ class CommentTestClass(TestCase):
         self.test_Image = Image(user=self.jane, caption="Another Profile")
 
         self.test_comment = Comment(
-            Image=self.test_Image, comment_content="Wow")
+            Image=self.test_Image, comment_content="great")
 
         gotten_comments = Comment.get_Image_comments(self.test_Image.id)
 
