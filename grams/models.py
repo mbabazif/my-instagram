@@ -43,6 +43,7 @@ class Image(models.Model):
     date_uploaded = models.DateTimeField(auto_now_add=True, null=True)
     profile = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.TextField(blank=True)
 
     class Meta:
         ordering = ['-date_uploaded']
