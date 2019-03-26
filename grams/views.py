@@ -294,8 +294,8 @@ def unfollow(request, id):
 
 def search_results(request):
 
-    if 'user' in request.GET and request.GET["user"]:
-        search_term = request.GET.get("user")
+    if 'grammer' in request.GET and request.GET["grammer"]:
+        search_term = request.GET.get("grammer")
         searched_users = User.objects.filter(username__icontains=search_term)
         message = f"{search_term}"
 
