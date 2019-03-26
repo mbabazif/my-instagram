@@ -1,6 +1,4 @@
 from django.shortcuts import render, redirect 
-
-# Create your views here.
 from django.http  import HttpResponse, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist

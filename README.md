@@ -1,4 +1,4 @@
-## My Personal gallery Application
+## Instagram Application
 ### By Florence Mbabazi
 ### Description
 This is an application of instagram:
