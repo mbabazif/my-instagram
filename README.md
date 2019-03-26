@@ -9,6 +9,7 @@ The user is able to sign to the application to start using:
 The user is able to upload the picture to the application:
 The is able to see all pictures and the profile picture:
 The user is able to follow other users:
+And the user is able to like the Photo
 
 
 ### Prerequisite
