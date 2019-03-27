@@ -58,7 +58,7 @@ class ImageTestClass(TestCase):
         '''
         # Create a Image instance
         self.new_Image = Image(
-            caption='Python James is Muriuki who wrote Python content for Moringa School')
+            caption='I am a student in Moringa School')
 
     def test_instance(self):
         '''
@@ -80,8 +80,8 @@ class ImageTestClass(TestCase):
         '''
         Test case to check if all Images for a specific profile are gotten from the database
         '''
-        self.james = User(username="bety")
-        self.james.save()
+        self.wecode = User(username="bety")
+        self.wecode.save()
 
         self.jane = User(username="grace")
         self.jane.save()
@@ -106,8 +106,8 @@ class FollowTestClass(TestCase):
         '''
         Test case to check if self.new_Image in an instance of Follow class
         '''
-        self.james = User(username="bety")
-        self.james.save()
+        self.wecode = User(username="bety")
+        self.wecode.save()
 
         self.jane = User(username="grace")
         self.jane.save()
@@ -122,8 +122,8 @@ class FollowTestClass(TestCase):
         '''
         Test case to check if get following is getting profiles a specific user is following
         '''
-        self.james = User(username="bety")
-        self.james.save()
+        self.wecode = User(username="bety")
+        self.wecode.save()
 
         self.jane = User(username="grace")
         self.jane.save()
@@ -164,8 +164,8 @@ class CommentTestClass(TestCase):
         '''
         Test case to check if get Image comments is getting comments for a specific Image
         '''
-        self.james = User(username="bety")
-        self.james.save()
+        self.wecode = User(username="bety")
+        self.wecode.save()
 
         self.jane = User(username="grace")
         self.jane.save()
@@ -184,40 +184,4 @@ class CommentTestClass(TestCase):
         # No comments were saved so expect True
         self.assertTrue(len(gotten_comments) == len(comments))
 
-
-class LikeTestClass(TestCase):
-    '''
-    Test class to test the Like class
-    '''
-
-    def setUp(self):
-        '''
-        Set up method that will run before every Test
-        '''
-        # Create a Like instance
-        self.new_like = Like(likes_number=0)
-
-    def test_instance(self):
-        '''
-        Test case to check if self.new_like is an instance of Like
-        '''
-
-        self.assertTrue(isinstance(self.new_like, Like))
-
-    def test_get_Image_likes(self):
-        '''
-        Test case to check if get Image likes is getting the likes for a specific Image
-        '''
-
-        gotten_likes = Like.get_Image_likes(4990826417581240726341234)
-
-        self.assertFalse(len(gotten_likes), 1)
-
-    def test_num_likes(self):
-        '''
-        Test to check if num likes is getting the number of likes a Image is getting
-        '''
-        gotten_likes = Like.num_likes(123412312351123412341234123412341234)
-
-        self.assertEqual(gotten_likes, 0)
 
