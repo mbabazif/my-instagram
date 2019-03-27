@@ -77,10 +77,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.commoValueError: Not a boolean: True #set to false in production
-monMiddleware',
-    'django.middleware.csrf.ValueError: Not a boolean: True #set to false in production
-iewMiddleware',
+    'django.middleware.commoValueError',
+    'django.middleware.csrf.ValueError',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
