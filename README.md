@@ -33,7 +33,7 @@ In your terminal:
 
 $ git clone: https://github.com/mbabazif/my-instagram.git
 
-You can view this application using this link:https://mbagallery.herokuapp.com/
+You can view this application using this link:https://instagrammba.herokuapp.com/
 
 To run the application, in your terminal:
 
