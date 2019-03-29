@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect 
+from django.shortcuts import render, redirect
 from django.http  import HttpResponse, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
@@ -38,7 +38,7 @@ def index(request):
     # images = Image.get_images()
     current_user = request.user
 
-    title = 'my-instagram'
+    title = 'FlipGram'
 
     # user_info = Profile.objects.get(user=current_user.id)
 
@@ -305,7 +305,3 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'searched.html', {"message": message})
-
-
-
-
